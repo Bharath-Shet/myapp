@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import validator from 'validator';
 import './RegisterComponent.css';
 import Header from './Header';
-import { ThreeSixtySharp } from '@material-ui/icons';
 
 const RegisterUrl = "http://localhost:5000/register";
 
