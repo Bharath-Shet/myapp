@@ -161,7 +161,7 @@ class Register extends Component{
                         <p id="success-failure">{this.state.result}</p>
                         <div className="form-group col-md-12">
                             <label>First Name</label>
-                            <input name="fname" id="fname" value={this.state.fname}
+                            <input name="fname" placeholder="Enter Your First Name" id="fname" value={this.state.fname}
                             className="form-control" onChange={this.handleChange} onBlur={this.validatename}
                             />
 
@@ -173,13 +173,13 @@ class Register extends Component{
            
                         <div className="form-group col-md-12">
                             <label>Email</label>
-                            <input name="email" id="email" value={this.state.email}
+                            <input name="email" id="email"  placeholder="Enter Your Email" value={this.state.email}
                             className="form-control" onChange={this.handleChange} onInput={this.validateEmail}/>
                              <p id="email-error" className="display-error"></p>
                         </div>
                         <div className="form-group col-md-6">
                             <label>Password</label>
-                            <input name="password" id="password" value={this.state.password}
+                            <input type="password" name="password" id="password" placeholder="Enter Your Password" value={this.state.password}
                             className="form-control" onChange={this.handleChange} onInput={this.validatePwd}/>
                             <p id="pwd-error" className="display-error"></p>
                             <div id="pwd_str"></div>
@@ -194,7 +194,7 @@ class Register extends Component{
 
                         <div className="form-group col-md-12">
                             <label>Phone</label>
-                            <input name="phone" id="phone" value={this.state.phone}
+                            <input name="phone" id="phone" placeholder="Enter Your Phone Number" value={this.state.phone}
                             className="form-control" onChange={this.handleChange} onInput={this.validatePhone} />
 
                             <p id="phone-error" className="display-error"></p>
@@ -209,11 +209,13 @@ class Register extends Component{
                         </div>
 
 
-
-                        <button className="btn btn-success"
+                    <div className="form-group col-md-12" >
+                         <button className="btn btn-success"
                         onClick={this.handleSubmit}>
                           Register
                         </button>
+                    </div>
+                        
                     </div>
                 </div>
             </div>

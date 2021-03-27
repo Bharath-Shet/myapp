@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Header from './Header';
 import UserDisplay from './UserDisplay';
 
 const url = "http://localhost:5000/users";
@@ -19,9 +20,11 @@ class UserList extends Component{
             this.props.history.push('/profile');
         }
         return(
-            <div>
-               <UserDisplay userData={this.state.users}/>
-            </div>
+            <>
+                <div>
+                    <UserDisplay userData={this.state.users}/>
+                </div>
+            </>
         )
     }
 

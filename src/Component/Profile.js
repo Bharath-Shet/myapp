@@ -34,20 +34,24 @@ class Profile extends Component{
         return(
             <>
                <Header/>
-                <div className="panel panel-success">
-                    <div className="panel-heading">
-                        <h4>User Profile</h4>
-                    </div>
-                    <div className="panel-body">
-                        <div className="card">                            
-                            <p className="user-profile-details">Hi {this.state.user.fname}</p>
-                            <p className="user-profile-details">Your Email id - {this.state.user.email}</p >
-                            <p className="user-profile-details">Your Phone Number - {this.state.user.phone}</p>
-                            <p className="user-profile-details">Your Date of birth - {this.state.user.dob}</p>
-                            <p className="user-profile-details">Your role - {this.state.user.role}</p>
+               <div className="container">
+                    <div className="panel panel-success">
+                        <div className="panel-heading">
+                            <h4>User Profile</h4>
                         </div>
+                        <div className="panel-body">
+                            <div className="card">                            
+                                <p className="user-profile-details">Hi {this.state.user.fname}</p>
+                                <p className="user-profile-details">Your Email id - {this.state.user.email}</p >
+                                <p className="user-profile-details">Your Phone Number - {this.state.user.phone}</p>
+                                <p className="user-profile-details">Your Date of birth - {this.state.user.dob}</p>
+                                <p className="user-profile-details">Your role - {this.state.user.role}</p>
+                            </div>
+
+                            {this.conditionRender()}
+                        </div>
+                        
                     </div>
-                    {this.conditionRender()}
                 </div>
             </>
         )

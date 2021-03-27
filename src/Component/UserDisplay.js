@@ -1,5 +1,5 @@
-
 import React from 'react';
+import Header from './Header';
 
 const UserDisplay = (props) => {
     const renderUser = ({userData}) => {
@@ -19,29 +19,32 @@ const UserDisplay = (props) => {
         }
     }
     return(
-        <div>
-            <center>
-                <h2>List Of Users</h2>
-            </center>
-            <div className="table-responsive">
-                <table className="table table-striped table-hover">
-                    <thead className="thead-dark">
-                        <tr>
-                            <th>Sno</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Date of birth</th>
-                            <th>Role</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {renderUser(props)}
-                    </tbody>
+        <>
+        <Header/>
+            <div>
+                <center>
+                    <h2>List Of Users</h2>
+                </center>
+                <div className="table-responsive">
+                    <table className="table table-striped table-hover">
+                        <thead className="thead-dark">
+                            <tr>
+                                <th>Sno</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Date of birth</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {renderUser(props)}
+                        </tbody>
 
-                </table>
+                    </table>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
